@@ -110,7 +110,7 @@ module NavbarHelper
   end
 
   def container_div(brand, brand_link, responsive, fluid, &block)
-    content_tag :div, :class => "container" do
+    content_tag :div, :class => "container#{"-fluid" if fluid}" do
       container_div_with_block(brand, brand_link, responsive, &block)
     end
   end
